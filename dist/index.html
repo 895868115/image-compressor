@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>免费图片无损压缩工具</title>
+  <script type="module" crossorigin src="./assets/index-xxJaUdFW.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-ZzprZuq9.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- 页面标题 -->
+    <h1 class="title">免费图片压缩工具 无损画质 一键批量下载</h1>
+
+    <!-- 上传区域 -->
+    <div class="upload-area">
+      <input type="file" id="fileInput" multiple accept="image/jpeg,image/png,image/webp">
+      <label for="fileInput" class="upload-label">
+        <span class="upload-icon">+</span>
+        <span class="upload-text">点击或拖拽上传图片</span>
+        <span class="upload-hint">支持JPG、PNG、WebP格式，单张图片不超过10MB</span>
+      </label>
+    </div>
+
+    <!-- 压缩选项 -->
+    <div class="compress-options">
+      <label for="compressLevel">压缩强度：</label>
+      <select id="compressLevel">
+        <option value="low">轻度压缩</option>
+        <option value="medium" selected>中度压缩</option>
+        <option value="high">强力压缩</option>
+      </select>
+      <label for="formatConvert">格式转换：</label>
+      <select id="formatConvert">
+        <option value="original" selected>保持原格式</option>
+        <option value="jpg">转成JPG</option>
+        <option value="webp">转成WebP</option>
+      </select>
+      <button id="compressBtn" class="btn-primary">一键压缩</button>
+    </div>
+
+    <!-- 图片预览区域 -->
+    <div id="previewContainer" class="preview-container"></div>
+
+    <!-- 批量下载按钮 -->
+    <div class="download-all">
+      <button id="downloadAllBtn" class="btn-secondary" disabled>打包下载全部</button>
+    </div>
+  </div>
+
+
+  <!-- 图片预览模态框 -->
+  <div id="imageModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modalImage" class="modal-image" src="" alt="">
+    </div>
+  </div>
+</body>
+
+</html>
